@@ -1,15 +1,19 @@
+import ApiError from "../error/ApiError.js";
+
 class userController {
-  async registration(req,res) {
+  async registration(req, res) {}
 
-  }
+  async login(req, res) {}
 
-  async login(req,res) {
-    
-  }
+  async check(req, res, next) {
+    const {id} = req.query;
 
-  async check(req,res) {
-    res.json('asfasfasfasfasfa')
+    if (!id) {
+      return next(ApiError.badRequest('не задан ID'));
+    }
+
+    res.json(id);
   }
 }
 
-export default new userController()
+export default new userController();

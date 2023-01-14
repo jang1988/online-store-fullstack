@@ -16,7 +16,7 @@ const BasketDevice = sequelize.define('basket_device', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 });
 
-const Device = sequelize.define('device', {
+export const Device = sequelize.define('device', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING, unique: true, allowNull: false },
   price: { type: DataTypes.INTEGER, allowNull: false },
@@ -24,12 +24,12 @@ const Device = sequelize.define('device', {
   img: { type: DataTypes.STRING, allowNull: false },
 });
 
-const Type = sequelize.define('type', {
+export const Type = sequelize.define('type', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING, unique: true, allowNull: false },
 });
 
-const Brand = sequelize.define('brand', {
+export const Brand = sequelize.define('brand', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING, allowNull: false },
 });
@@ -76,4 +76,4 @@ DeviceInfo.belongsTo(Device);
 Type.belongsToMany(Brand, { through: TypeBrand });
 Brand.belongsToMany(Type, { through: TypeBrand });
 
-export default { User, Basket, BasketDevice, Device, Type, Brand, Rating, TypeBrand, DeviceInfo };
+// export default { User, Basket, BasketDevice, Device, Type, Brand, Rating, TypeBrand, DeviceInfo };
