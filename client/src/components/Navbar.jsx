@@ -10,7 +10,6 @@ import { observer } from 'mobx-react-lite';
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);
-  console.log('user: ', user);
 
   return (
     <Navbar bg="dark" variant="dark">
