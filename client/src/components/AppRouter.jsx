@@ -9,8 +9,6 @@ import { SHOP_ROUTE } from '../utils/consts';
 const AppRouter = observer(() => {
   const { user } = useContext(Context);
 
-  console.log(user._isAuth)
-
   return (
     <Routes>
       {user._isAuth &&

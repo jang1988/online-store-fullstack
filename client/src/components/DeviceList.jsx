@@ -6,6 +6,7 @@ import DeviceItem from './DeviceItem.jsx';
 
 const DeviceList = observer(() => {
   const {device} = useContext(Context)
+  console.log('device: ', device)
   return (
     <div>
       <Row className="d-flex">

@@ -18,7 +18,7 @@ app.use(fileupload({}));
 app.use(express.static('static'));
 app.use('/api',router)
 
-//Обработка ошибокб последний Middleweare
+//Обработка ошибок последний Middleweare
 app.use(errorHandler)
 
 
